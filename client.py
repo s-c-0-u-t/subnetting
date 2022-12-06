@@ -11,7 +11,7 @@ client = socket.socket(socket.AF_INET,
 client.connect((SERVER, PORT))
 # Running a infinite loop
 choice=-1
-while True:
+while choice!=13:
     print("Example : 192.234.56.43")
     # here we get the input from the user
     inp = input("Enter IP address: ")
@@ -28,8 +28,8 @@ while True:
     # Here we received output from the server socket
     answer = client.recv(1024)
     print("Answer is "+answer.decode())
-    if choice == "13":
-        break
+#     if choice == "13":
+#         break
     #print("Type 'Over' to terminate")
  
 client.close()
